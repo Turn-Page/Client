@@ -4,8 +4,10 @@ import { useQuery } from "@tanstack/react-query";
 import { apiGetBookDetail } from "../../apis/bookDetail/apiGetBookDetail";
 import { getStar } from "../../utils/getStar";
 import BookInfo from "../../components/bookDetail/BookInfo/BookInfo";
-import Review from "../../components/bookDetail/Review/Review";
+import Review from "../../components/bookDetail/ReviewList/ReviewList";
 import { useEffect, useRef } from "react";
+import ReviewList from "../../components/bookDetail/ReviewList/ReviewList";
+import ReviewWrite from "../../components/bookDetail/ReviewWrite/ReviewWrite";
 
 const BookDetail = () => {
   const { bookId } = useParams();
@@ -17,7 +19,8 @@ const BookDetail = () => {
   return (
     <style.Container ref={scrollRef}>
       <BookInfo bookId={Number(bookId)} />
-      <Review bookId={Number(bookId)} />
+      <ReviewWrite bookId={Number(bookId)} />
+      <ReviewList bookId={Number(bookId)} />
     </style.Container>
   );
 };
