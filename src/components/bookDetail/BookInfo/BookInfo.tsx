@@ -3,6 +3,8 @@ import { apiGetBookDetail } from "../../../apis/bookDetail/apiGetBookDetail";
 import * as style from "./styles";
 import { getStar } from "../../../utils/getStar";
 import { Link } from "react-router-dom";
+import { IBookInfoProps } from "./type";
+import { convertDateFormat } from "../../../utils/convertDateFormat";
 
 const BookInfo = ({ bookId }: IBookInfoProps) => {
   const { data: bookInfo } = useQuery({
@@ -12,43 +14,43 @@ const BookInfo = ({ bookId }: IBookInfoProps) => {
 
   return (
     <style.Container>
-      <style.TitleWrap>
-        <h1>{bookInfo?.title}</h1>
-        <h2>{bookInfo?.subTitle}</h2>
-      </style.TitleWrap>
-
-      <style.InfoWrap>
-        <div className="col col1">
-          <div className="row1">
-            <h1>{bookInfo?.author}</h1>
-            <h1>
-              {bookInfo?.publisher} {bookInfo?.publicationDate}
-            </h1>
+      <style.BookInfo>
+        <div className="g1">
+          <img className="book-img" src={bookInfo?.cover} />
+          <Link className="link-sell" to={`/sell?bookId=${bookInfo?.bookId}`}>
+            중고 판매 글 확인하러 가기
+          </Link>
+        </div>
+        <div className="g2">
+          <div className="g21">{bookInfo?.title}</div>
+          <div className="g22">{bookInfo?.subTitle}</div>
+          <div className="g23">
+            <span className="label">저자</span>
+            <div className="value">{bookInfo?.author}</div>
           </div>
-
-          <div className="row2">
-            <div>
-              <span>{getStar(Number(bookInfo?.star))}</span>
-              <span className="score">{bookInfo?.star.toFixed(1)}</span>
+          <div className="g24">
+            <span className="label">출판사</span>
+            <div className="value">{bookInfo?.publisher}</div>
+          </div>
+          <div className="g25">
+            <span className="label">출판일</span>
+            <div className="value">
+              {convertDateFormat(bookInfo?.publicationDate)}
             </div>
-            <Link to="#">다른 독자들의 리뷰 둘러보기</Link>
+          </div>
+
+          <div className="g26">
+            <div className="star">{getStar(Number(bookInfo?.star))}</div>
+            <span className="score">{bookInfo?.star.toFixed(1)}</span>
           </div>
         </div>
-        <div className="col col2">
-          <img src={bookInfo?.cover} height={300} />
-          <Link to="#">중고 판매 글 확인하러 가기</Link>
-        </div>
-        <div className="col col3">
-          <h1>책 소개</h1>
-          <p className="desc">{bookInfo?.description}</p>
-        </div>
-      </style.InfoWrap>
+      </style.BookInfo>
+      <style.Description>
+        <div className="caption">책 소개</div>
+        <p className="g1">{bookInfo?.description}</p>
+      </style.Description>
     </style.Container>
   );
 };
 
 export default BookInfo;
-
-interface IBookInfoProps {
-  bookId: number;
-}

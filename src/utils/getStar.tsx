@@ -1,5 +1,4 @@
 import { PiStarFill } from "react-icons/pi";
-import styled, { useTheme } from "styled-components";
 
 export const getStar = (num: number) => {
   num = Math.round(num);

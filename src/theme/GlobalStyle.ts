@@ -40,6 +40,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -48,6 +49,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+
   
 }
 ol, ul {
@@ -179,6 +181,26 @@ input::placeholder {
     word-break: break-all;
     overflow: auto;
   }
+
+////////////////////////////////////////
+
+
+.pointer{
+  cursor : pointer;
+}
+
+.flex-center{
+  display :flex;
+  justify-content : center;
+  align-items : center;
+}
+
+
+.m-28{
+  margin : 28px;
+}
+
+
 `;
 
 export default GlobalStyle;
