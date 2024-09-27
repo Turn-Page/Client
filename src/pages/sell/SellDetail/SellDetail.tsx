@@ -11,7 +11,6 @@ import { apiDeleteSell } from "../../../apis/sell/apiDeleteSell/apiDeleteSell";
 
 const SellDetail = () => {
   const { sellId } = useParams();
-
   const navigate = useNavigate();
   const accessToken = useRecoilValue(accessTokenState);
 
@@ -32,6 +31,7 @@ const SellDetail = () => {
     queryFn: () => apiGetSellDetail(Number(sellId), accessToken as string),
   });
 
+  console.log(sellData);
   return (
     <style.Container>
       <h1 className="page-title">판매글 상세</h1>
