@@ -2,76 +2,66 @@ import styled from "styled-components";
 
 export const Container = styled.div``;
 
-export const TitleWrap = styled.div`
+export const BookInfo = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 30px;
-  padding-bottom: 40px;
-
-  h1 {
-    font-family: ${(p) => p.theme.fontFamily.medium};
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-  }
-  h2 {
-  }
-`;
-export const InfoWrap = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-  .col {
+  gap: 80px;
+
+  .g1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    flex-basis: 300px;
-  }
-  .col1 {
-    > .row1 {
-      font-size: 1.3rem;
-      text-align: center;
-
-      > * {
-        margin: 18px;
-      }
+    .book-img {
+      height: 400px;
     }
-    > .row2 {
-      > a {
-        color: #aaa;
-      }
-
-      .score {
-        margin-left: 6px;
-        font-size: 1.4rem;
-      }
-      > div {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
+    .link-sell {
+      margin-top: 10px;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.03);
+        color: ${(p) => p.theme.color.icon.icon2};
       }
     }
   }
-  .col2 {
-    > a {
-      color: #aaa;
-      margin-top: 20px;
-    }
-  }
-  .col3 {
-    align-items: start;
-    justify-content: center;
-    > h1 {
+  .g2 {
+    .g21 {
       font-family: ${(p) => p.theme.fontFamily.medium};
-      margin-bottom: 18px;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+      margin: 10px 0;
+    }
+    .g22 {
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+    }
+    .g23,
+    .g24,
+    .g25 {
+      display: flex;
+      margin-bottom: 10px;
     }
 
-    .desc {
-      line-height: 120%;
+    .g26 {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
+
+    .label {
+      width: 80px;
+      color: ${(p) => p.theme.color.text.text2};
+    }
+    .value {
+    }
+  }
+`;
+export const Description = styled.div`
+  margin-top: 180px;
+
+  .g1 {
+    padding: 30px 100px;
+    font-size: 1.1rem;
+    line-height: 130%;
   }
 `;
