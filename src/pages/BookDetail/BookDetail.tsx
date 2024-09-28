@@ -1,10 +1,6 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import * as style from "./styles";
-import { useQuery } from "@tanstack/react-query";
-import { apiGetBookDetail } from "../../apis/bookDetail/apiGetBookDetail";
-import { getStar } from "../../utils/getStar";
 import BookInfo from "../../components/bookDetail/BookInfo/BookInfo";
-import Review from "../../components/bookDetail/ReviewList/ReviewList";
 import { useEffect, useRef } from "react";
 import ReviewList from "../../components/bookDetail/ReviewList/ReviewList";
 import ReviewWrite from "../../components/bookDetail/ReviewWrite/ReviewWrite";

@@ -1,7 +1,7 @@
 import ReactModal from "react-modal";
 import { apiSearchBookAladin } from "../../apis/aladinOpenAPI/apiSearchBookAladin";
 import SearchBox from "../SearchBox/SearchBox";
-import { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useState } from "react";
 import { ISearchBookAladin } from "../../apis/aladinOpenAPI/types";
 import { debounce } from "lodash";
 import * as style from "./styles";

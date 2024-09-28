@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { apiGetGoogleLoginToken } from "../../apis/login/apiGetGoogleLoginToken";
 import { useRecoilState } from "recoil";
 import { accessTokenState } from "../../recoil/accessTokenState";

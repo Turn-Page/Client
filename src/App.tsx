@@ -1,12 +1,8 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header/Header";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { MutableRefObject, useEffect, useRef } from "react";
-import { useSetRecoilState } from "recoil";
 
 function App() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   return (
     <div className="App">
       <Header />

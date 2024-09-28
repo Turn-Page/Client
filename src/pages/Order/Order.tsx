@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { ISellDetail } from "../../apis/sell/apiGetSellDetail/types";
 import * as style from "./styles";
 import { shortenText } from "../../utils/shortenText";
