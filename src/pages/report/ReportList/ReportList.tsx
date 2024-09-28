@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import BookList from "../../../components/BookList/BookList";
 import * as Style from "./styles";
 import FloatingBtn from "../../../components/FloatingBtn/FloatingBtn";

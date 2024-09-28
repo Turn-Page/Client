@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
 const GoogleLoginBtn = () => {
   const handleLogin = () => {
     const queryString = new URLSearchParams({

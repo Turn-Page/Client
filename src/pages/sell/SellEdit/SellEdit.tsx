@@ -1,8 +1,4 @@
-import { useEffect, useState } from "react";
-import BookList from "../../../components/BookList/BookList";
 import * as Style from "./styles";
-import SearchBookModal from "../../../components/SearchBookModal/SearchBookModal";
-import { ISearchBookAladin } from "../../../apis/aladinOpenAPI/types";
 import { splitTitle } from "../../../utils/splitTitle";
 import { convertDateFormat } from "../../../utils/convertDateFormat";
 import Btn2 from "../../../components/buttons/Btn2/Btn2";
@@ -12,13 +8,10 @@ import { StyledTextArea } from "../../../styles/StyledTextArea";
 import { useForm } from "react-hook-form";
 import { accessTokenState } from "../../../recoil/accessTokenState";
 import { useRecoilValue } from "recoil";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
-import { IoConstructOutline } from "react-icons/io5";
-import NotSelectBook from "../../../components/NotSelectBook/NotSelectBook";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ISellEditForm } from "./type";
 import { ISellDetail } from "../../../apis/sell/apiGetSellDetail/types";
 import { apiPatchSellEdit } from "../../../apis/sell/apiPatchSellEdit/apiPatchSellEdit";
-import { IPatchSellEdit } from "../../../apis/sell/apiPatchSellEdit/types";
 
 const SellEdit = () => {
   const { sellData }: { sellData: ISellDetail } = useLocation().state;
@@ -61,7 +54,7 @@ const SellEdit = () => {
         alert("판매글을 수정했습니다.");
         navigate("/sell");
       })
-      .catch((err) => alert("판매글 수정에 실패했습니다."));
+      .catch(() => alert("판매글 수정에 실패했습니다."));
   };
 
   const onInvalid = () => {

@@ -1,5 +1,3 @@
-import { theme } from "antd";
-import ReactModal from "react-modal";
 import styled from "styled-components";
 
 export const Container = styled.div`

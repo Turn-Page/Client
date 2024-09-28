@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IFollowList, IMyOrder } from "./types";
+import { IMyOrder } from "./types";
 
 export const apiGetMyOrderList = ({
   pageParam,

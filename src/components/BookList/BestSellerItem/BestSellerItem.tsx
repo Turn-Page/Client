@@ -1,4 +1,3 @@
-import { PiStarFill, PiStarBold } from "react-icons/pi";
 import { BookInfoWrap, RowA, RowB } from "./styles";
 import { useNavigate } from "react-router-dom";
 import { IBestSeller } from "../../../apis/bestseller/types";

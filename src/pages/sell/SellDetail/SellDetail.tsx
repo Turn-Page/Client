@@ -21,7 +21,7 @@ const SellDetail = () => {
           alert("판매글을 삭제하였습니다.");
           navigate("/mypage");
         })
-        .catch((err) => {
+        .catch(() => {
           alert("판매글 삭제에 실패했습니다.");
         });
   };

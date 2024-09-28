@@ -8,7 +8,6 @@ import { splitTitle } from "../../../utils/splitTitle";
 import { convertDateFormat } from "../../../utils/convertDateFormat";
 import Btn2 from "../../../components/buttons/Btn2/Btn2";
 import { apiDeleteReport } from "../../../apis/report/apiDeleteReport/apiDeleteReport";
-import { AxiosError } from "axios";
 
 const ReportDetail = () => {
   const navigate = useNavigate();

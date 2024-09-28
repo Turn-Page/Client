@@ -1,5 +1,4 @@
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import { ThemeProvider } from "styled-components";
 import { lightTheme } from "./theme/theme";
 import GlobalStyle from "./theme/GlobalStyle";

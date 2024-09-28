@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import BookList from "../../../components/BookList/BookList";
+import { useState } from "react";
 import * as Style from "./styles";
 import SearchBookModal from "../../../components/SearchBookModal/SearchBookModal";
 import { ISearchBookAladin } from "../../../apis/aladinOpenAPI/types";
@@ -12,8 +11,7 @@ import { StyledTextArea } from "../../../styles/StyledTextArea";
 import { useForm } from "react-hook-form";
 import { accessTokenState } from "../../../recoil/accessTokenState";
 import { useRecoilValue } from "recoil";
-import { Navigate, useNavigate } from "react-router-dom";
-import { IoConstructOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 import { apiPostSellNew } from "../../../apis/sell/apiPostSellNew/apiPostSellNew";
 import { IPostSellNew } from "../../../apis/sell/apiPostSellNew/types";
 import NotSelectBook from "../../../components/NotSelectBook/NotSelectBook";
@@ -62,7 +60,7 @@ const SellNew = () => {
         alert("판매글이 성공적으로 등록되었습니다.");
         navigate("/sell");
       })
-      .catch((err) => alert("판매글 등록에 실패했습니다."));
+      .catch(() => alert("판매글 등록에 실패했습니다."));
   };
 
   const onInvalid = () => {

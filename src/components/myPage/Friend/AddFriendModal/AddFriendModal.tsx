@@ -1,12 +1,11 @@
-import ReactModal, { setAppElement } from "react-modal";
+import ReactModal from "react-modal";
 import * as style from "./styles";
 import { IoClose, IoPersonAddSharp } from "react-icons/io5";
 import { apiPostFollow } from "../../../../apis/myPage/apiPostFollow";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRecoilValue } from "recoil";
 import { accessTokenState } from "../../../../recoil/accessTokenState";
 import { useForm } from "react-hook-form";
-import { AxiosError } from "axios";
 import { IFollowList } from "../../../../apis/myPage/types";
 import { QueryObserverResult, RefetchOptions } from "@tanstack/react-query";
 

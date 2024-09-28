@@ -1,5 +1,4 @@
 import axios from "axios";
-import { splitTitle } from "../../../utils/splitTitle";
 import { IReportDetail } from "./types";
 
 export const apiGetReportDetail = (reportId: number, accessToken: string) => {

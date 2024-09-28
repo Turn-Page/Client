@@ -1,5 +1,4 @@
-import { theme } from "antd";
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -136,7 +135,7 @@ input::placeholder {
     font-family : ${(p) => p.theme.fontFamily.medium};
 
   }
-   textarea::placeholder {
+  textarea::placeholder {
     font-family : ${(p) => p.theme.fontFamily.medium};
     color: ${(p) => p.theme.color.text.text3};
   }

@@ -8,7 +8,7 @@ import { apiGetBestSeller } from "../../../apis/bestseller/apiGetBestSeller";
 import { IBestSeller } from "../../../apis/bestseller/types";
 
 const BestSellerCarousel = () => {
-  const { isLoading, data: bestSellerData } = useQuery<IBestSeller[]>({
+  const { data: bestSellerData } = useQuery<IBestSeller[]>({
     queryKey: ["bestSeller", "home"],
     queryFn: () => apiGetBestSeller({ pageParam: 0, size: 50 }),
   });

@@ -1,7 +1,4 @@
-import { useState } from "react";
 import * as Style from "./styles";
-import SearchBookModal from "../../../components/SearchBookModal/SearchBookModal";
-import { ISearchBookAladin } from "../../../apis/aladinOpenAPI/types";
 import { splitTitle } from "../../../utils/splitTitle";
 import { convertDateFormat } from "../../../utils/convertDateFormat";
 import Btn2 from "../../../components/buttons/Btn2/Btn2";
@@ -37,8 +34,6 @@ const ReportEdit = () => {
   });
 
   const accessToken = useRecoilValue(accessTokenState);
-
-  const [selectedBook, setSelectedBook] = useState<ISearchBookAladin>();
 
   const navigate = useNavigate();
 
