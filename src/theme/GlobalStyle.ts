@@ -135,7 +135,7 @@ input::placeholder {
     font-family : ${(p) => p.theme.fontFamily.medium};
 
   }
-   textarea::placeholder {
+  textarea::placeholder {
     font-family : ${(p) => p.theme.fontFamily.medium};
     color: ${(p) => p.theme.color.text.text3};
   }
