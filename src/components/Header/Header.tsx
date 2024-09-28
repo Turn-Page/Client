@@ -1,9 +1,9 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import * as Style from "./styles";
 import { searchScrollMoveState } from "../../recoil/searchScrollMoveState";
 import { accessTokenState } from "../../recoil/accessTokenState";
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 import SearchBox from "../SearchBox/SearchBox";
 import { throttle } from "lodash";
 

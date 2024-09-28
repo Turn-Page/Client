@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { IBtn1Props } from "./types";
 import { Container } from "./styles";
 

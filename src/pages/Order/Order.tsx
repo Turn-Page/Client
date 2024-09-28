@@ -40,7 +40,7 @@ const Order = () => {
         .then((data) => {
           setOrderNumber(data.orderNumber);
         })
-        .catch((err) => {
+        .catch(() => {
           alert("결제에 실패했습니다.");
         });
   };

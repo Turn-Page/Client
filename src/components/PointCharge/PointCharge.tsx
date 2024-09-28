@@ -2,9 +2,7 @@ import ReactModal from "react-modal";
 import * as style from "./styles";
 import { IoClose } from "react-icons/io5";
 import { GrMoney } from "react-icons/gr";
-import { useState } from "react";
 import { convertPriceComma } from "../../utils/convertPriceComma";
-import Btn1 from "../buttons/Btn1/Btn1";
 import { apiPatchPointCharge } from "../../apis/point/apiPatchPointCharge/apiPatchPointCharge";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { accessTokenState } from "../../recoil/accessTokenState";
@@ -26,7 +24,7 @@ const PointCharge = ({ refetch }: IPointChargeProps) => {
         setChargeModalToggle(false);
         refetch();
       })
-      .catch((err) => alert("포인트 충전을 실패했습니다."));
+      .catch(() => alert("포인트 충전을 실패했습니다."));
   };
 
   return (

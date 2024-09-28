@@ -1,9 +1,9 @@
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import { Container } from "./styles";
 import { apiGetBestSeller } from "../../apis/bestseller/apiGetBestSeller";
 import { IBestSeller } from "../../apis/bestseller/types";
 import BestSellerItem from "./BestSellerItem/BestSellerItem";
-import { InView, useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import { apiGetReportList } from "../../apis/report/apiGetReportList/apiGetReportList";
 import { useRecoilValue } from "recoil";
@@ -36,7 +36,7 @@ const BookList = ({
     if (inView && hasNextPage) fetchNextPage();
   }, [inView]);
 
-  const { isLoading, data, fetchNextPage, hasNextPage } = useInfiniteQuery<
+  const { data, fetchNextPage, hasNextPage } = useInfiniteQuery<
     IBestSeller[] | IReport[] | ISell[] | IMyOrder[]
   >({
     queryKey: [mode, accessToken],

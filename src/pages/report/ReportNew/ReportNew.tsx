@@ -1,18 +1,15 @@
-import { useEffect, useState } from "react";
-import BookList from "../../../components/BookList/BookList";
+import { useState } from "react";
 import * as Style from "./styles";
 import SearchBookModal from "../../../components/SearchBookModal/SearchBookModal";
 import { ISearchBookAladin } from "../../../apis/aladinOpenAPI/types";
 import { splitTitle } from "../../../utils/splitTitle";
 import { convertDateFormat } from "../../../utils/convertDateFormat";
 import Btn2 from "../../../components/buttons/Btn2/Btn2";
-import { convertPriceComma } from "../../../utils/convertPriceComma";
 import { StyledTextArea } from "../../../styles/StyledTextArea";
 import { useForm } from "react-hook-form";
 import { accessTokenState } from "../../../recoil/accessTokenState";
 import { useRecoilValue } from "recoil";
-import { Navigate, useNavigate } from "react-router-dom";
-import { IoConstructOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 import { IReportNewForm } from "./type";
 import { IPostReportNew } from "../../../apis/report/apiPostReportNew/types";
 import { apiPostReportNew } from "../../../apis/report/apiPostReportNew/apiPostReportNew";
@@ -62,7 +59,7 @@ const ReportNew = () => {
         alert("독후감이 성공적으로 등록되었습니다.");
         navigate("/report");
       })
-      .catch((err) => alert("독후감 등록에 실패했습니다."));
+      .catch(() => alert("독후감 등록에 실패했습니다."));
   };
 
   const onInvalid = () => {

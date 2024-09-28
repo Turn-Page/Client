@@ -14,7 +14,6 @@ const PeriodSelector = ({
   setValue,
   clearErrors,
   setError,
-  watch,
 }: IPeriodSelectorProps) => {
   const { RangePicker } = DatePicker;
 

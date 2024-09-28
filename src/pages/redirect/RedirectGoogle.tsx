@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { apiGetGoogleLoginToken } from "../../apis/login/apiGetGoogleLoginToken";
-import { useRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { accessTokenState } from "../../recoil/accessTokenState";
 
 // 1. 쿼리스트링에서 인가코드 받아와서 백엔드로 넘기기
@@ -9,8 +9,8 @@ import { accessTokenState } from "../../recoil/accessTokenState";
 
 const RedirectGoogle = () => {
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [accessToken, setAccessToken] = useRecoilState(accessTokenState);
+  const [searchParams] = useSearchParams();
+  const setAccessToken = useSetRecoilState(accessTokenState);
 
   const authCode = searchParams.get("code");
   const authState = searchParams.get("state");

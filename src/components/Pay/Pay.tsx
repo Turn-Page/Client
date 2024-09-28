@@ -1,5 +1,4 @@
 import * as style from "./styles";
-import Btn1 from "../buttons/Btn1/Btn1";
 import { useNavigate } from "react-router-dom";
 
 const Pay = ({ orderNumber }: { orderNumber: string }) => {

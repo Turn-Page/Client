@@ -60,7 +60,7 @@ const SellNew = () => {
         alert("판매글이 성공적으로 등록되었습니다.");
         navigate("/sell");
       })
-      .catch((err) => alert("판매글 등록에 실패했습니다."));
+      .catch(() => alert("판매글 등록에 실패했습니다."));
   };
 
   const onInvalid = () => {

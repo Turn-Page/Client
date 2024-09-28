@@ -1,6 +1,6 @@
 import BookList from "../../components/BookList/BookList";
 import { useEffect, useRef, useState } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilValue } from "recoil";
 import { searchScrollMoveState } from "../../recoil/searchScrollMoveState";
 import * as Style from "./styles";
 import BestSellerCarousel from "../../components/home/BestSellerCarousel/BestSellerCarousel";

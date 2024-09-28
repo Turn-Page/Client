@@ -25,6 +25,6 @@ export const Tab = styled.span<{ isClick: boolean }>`
   cursor: pointer;
   background-color: ${(p) =>
     p.isClick ? p.theme.color.btn.bg3 : p.theme.color.btn.bg1};
-  color: ${(p) => (p) =>
+  color: ${(p) =>
     p.isClick ? p.theme.color.btn.text3 : p.theme.color.btn.text1};
 `;

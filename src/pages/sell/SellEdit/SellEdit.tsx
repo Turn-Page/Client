@@ -54,7 +54,7 @@ const SellEdit = () => {
         alert("판매글을 수정했습니다.");
         navigate("/sell");
       })
-      .catch((err) => alert("판매글 수정에 실패했습니다."));
+      .catch(() => alert("판매글 수정에 실패했습니다."));
   };
 
   const onInvalid = () => {

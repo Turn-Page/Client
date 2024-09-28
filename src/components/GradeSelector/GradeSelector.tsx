@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { DownOutlined, UserOutlined } from "@ant-design/icons";
+import { DownOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
-import { Button, ConfigProvider, Dropdown, message, Space } from "antd";
+import { Button, ConfigProvider, Dropdown, Space } from "antd";
 import { useTheme } from "styled-components";
 import { ISellNewForm } from "../../pages/sell/SellNew/type";
 import {
